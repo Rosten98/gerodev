@@ -1,0 +1,16 @@
+<div class="container">
+	<nav class="nav">
+		<div class="logo">
+			<img src="" alt="Imágen del sitio">
+			<p><b>GeroDev</b></p>
+		</div>
+		<ul>
+			{% for page in site.pages %}
+			{% if page.title %}
+			<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+			{% endif %}
+			{% endfor %}
+			<li><a href="{{ "/blog" | prepend: site.baseurl }}">Articulos</a></li>
+		</ul>
+	</nav>
+</div>
