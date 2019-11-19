@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: $font-style;
+  color: $font-color
 }
 
 nav{
@@ -32,7 +33,36 @@ h1, h2{
   margin: 20px 0;
   text-align: center;
 }
-
+h3{
+  display: inline-block
+}
+div.card span{
+  font-weight: normal;
+  font-size: 0.8rem;
+}
 .container{
   margin: 0 10%;
+}
+.card{
+  padding: 40px 20px;
+  border-bottom: 1px dashed;
+  border-color: lightgrey;
+}
+.card:hover{
+  background-color: #a9e5bb;
+  -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
+}
+.card h3{
+  font-size: 1.5rem;
+}
+.card-header{
+
+}
+.card-content{
+
+}
+a.link-to-post{
+  color: $font-color
 }
