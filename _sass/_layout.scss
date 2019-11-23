@@ -35,6 +35,34 @@ h1, h2{
 h3{
   display: inline-block
 }
+
+.jumbotron{
+  width: 100%;
+  background-color: $jumbotron;
+  padding: 120px;
+  border-radius: 4px;
+}
+
+.division-container{
+  margin: 30px 0;
+  padding: 10px 50px;
+  h3{
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed lightgrey;
+  }
+
+  ul{
+    list-style: none;
+    li{
+      width: 100%;
+      padding: 5px;
+    }
+    li:hover{
+      background-color: $light-grey;
+    }
+  }
+}
 div.card span{
   font-weight: normal;
   font-size: 0.8rem;
