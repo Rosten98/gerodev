@@ -76,7 +76,7 @@ div.card span{
   border-color: lightgrey;
 }
 .card:hover{
-  background-color: #a9e5bb;
+  background-color: $light-grey;
   -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
   box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
@@ -95,16 +95,22 @@ a.link-to-post{
 }
 
 footer{
-  width: 100%;
-  padding: 20px 0;
+  background-color: $font-color;
   border-top: 1px solid lightgrey;
   margin-top: 25px;
+  padding: 20px 0;
+  width: 100%;
+
   div.container{
     display: flex;
     justify-content: space-between;
     align-items: space-between;
+    a{
+      color: white;
+    }
     p{
-      display: inline-block;
+      color: white;
+      display: inline-block
     }
   }
 }
