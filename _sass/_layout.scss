@@ -31,6 +31,7 @@ a:hover{
 h1, h2{
   margin: 20px 0;
   text-align: center;
+  font-size: 2rem;
 }
 h3{
   display: inline-block
@@ -95,7 +96,7 @@ a.link-to-post{
 }
 
 footer{
-  background-color: $font-color;
+  background-color: $main-dark;
   border-top: 1px solid lightgrey;
   margin-top: 25px;
   padding: 20px 0;
