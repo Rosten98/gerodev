@@ -93,3 +93,18 @@ div.card span{
 a.link-to-post{
   color: $font-color
 }
+
+footer{
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid lightgrey;
+  margin-top: 25px;
+  div.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    p{
+      display: inline-block;
+    }
+  }
+}
