@@ -121,6 +121,9 @@ footer{
     a{
       color: white;
     }
+    a:hover{
+      color: $font-color
+    }
     p{
       color: white;
       display: inline-block
