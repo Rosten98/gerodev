@@ -6,14 +6,19 @@ title: Articulos
 {% for post in site.posts %}
 <a href="{{ post.url | prepend: site.baseurl }}" class="link-to-post">
 	<div class="card">
+		<!-- <img src="Imagen distintiva del post" alt="{{post.img}}"> -->
 		<div class="card-header">
-			<img src="Imagen distintiva del post" alt="{{post.img}}">
 			<h3>
 				{{ post.title }}
 				<span class="blog-date">
 					<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 				</span>
 			</h3>
+			<div class="categories">
+				{% for post_category in post.categories %}
+					<p>{{ post_category }}</p>
+				{% endfor %}
+			</div>
 		</div>
 		<div class="card-content">
 			<p>
