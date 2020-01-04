@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  "Hola Mundo"
-date:   2020-01-20 21:40:00 -0600
+date:   2020-01-03 21:40:00 -0600
 author: Gerardo Rodriguez
 categories: Personal
 short_description: "Bienvenido a mi primer post. Espero lo disfrutes"
-
+published: true
 ---
-# Hola Mundo
 
 ¿Qué tal? Soy Gerardo y soy desarrollador de software. "Hola Mundo" típica frase que todo desarrollador escribe al introducirse a un nuevo lenguaje de programación. Bueno, ese es el objetivo, presentarme a mi y a este blog.
 
