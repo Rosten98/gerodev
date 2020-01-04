@@ -25,7 +25,9 @@ layout: default
       <p>No hay post publicados</p>
     {% endfor %}
   </ul>
-  <button><a href="">Ver más</a></button>
+  {% if site.posts.size > 3 %}
+    <button><a href="">Ver más</a></button>
+  {% endif %}
 </div>
 
 <div class="division-container">
