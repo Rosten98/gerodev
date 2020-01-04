@@ -2,7 +2,7 @@
 layout: post
 title:  "Hola Mundo"
 date:   2020-01-20 21:40:00 -0600
-author: Gerardo Rodríguez
+author: Gerardo Rodriguez
 categories: Personal
 short_description: "Bienvenido a mi primer post. Espero lo disfrutes"
 
