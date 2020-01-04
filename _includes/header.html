@@ -2,12 +2,10 @@
 	<div class="logo">
 		{% for image in site.static_files %}
 		  {% if image.path contains 'assets/images/gd1.png' %}
-	    		<img src="{{ image.path }}" alt="Imágen del sitio" width="50px" height="50px">
+	    		<a href="/"><img src="{{ image.path }}" alt="Imágen del sitio" width="50px" height="50px"></a>
 		  {% endif %}
 		{% endfor %}
-
-
-		<a href="/"><b>GeroDev</b></a>
+		<a href="/"><b>Gerodel</b></a>
 	</div>
 	<ul>
 		<li><a href="{{ '/' | prepend: site.baseurl }}">Inicio</a></li>
