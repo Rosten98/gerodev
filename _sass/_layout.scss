@@ -33,6 +33,10 @@ nav{
   }
 }
 
+header{
+  width: 100%;
+}
+
 a{
   text-decoration: none;
 }
@@ -45,12 +49,13 @@ h1{
 }
 
 .jumbotron{
-  width: 100%;
+  // width: 100%;
   background-color: $jumbotron;
-  padding: 120px;
+  padding: 60px;
   border-radius: 40px;
   text-align: center;
   font-weight: 300;
+  margin: 0 10%;
   b{
     font-size: 1.5rem;
   }
@@ -60,8 +65,8 @@ h1{
 }
 
 .division-container{
-  margin: 30px 0;
-  padding: 10px 50px;
+  margin: 30px 10%;
+  padding: 10px 0;
   h2{
     width: 100%;
     margin-bottom: 30px;
@@ -85,10 +90,6 @@ div.card span{
   font-size: 0.8rem;
 }
 
-.container{
-  margin: 0 10%;
-}
-
 .pages-content{
   margin: 0 10%;
   h3{
@@ -100,6 +101,7 @@ div.card span{
 }
 
 .card{
+  margin: 0 10%;
   padding: 40px 20px;
   border-bottom: 1px dashed;
   border-color: lightgrey;
@@ -135,13 +137,18 @@ a.link-to-post{
   color: $font-color
 }
 
-.post{
-  padding: 0 5%;
-  time{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 300;
+.post-title{
+  margin: 0 auto;
+  padding: 20px 10%;
+  height: 30%;
+  background-color: black;
+  time, h1{
+    color: white;
   }
+}
+
+.post-content{
+  padding: 0 10%;
   p{
     margin: 20px 0;
     font-size: 1.2rem;
@@ -160,7 +167,7 @@ footer{
   background-color: $main-dark;
   border-top: 1px solid lightgrey;
   margin-top: 55px;
-  padding: 20px 0;
+  padding: 20px 10%;
   width: 100%;
 
   div.container{
