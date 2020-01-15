@@ -108,6 +108,7 @@ h1{
       padding: 18px 10px;
     }
     li:hover{
+      border-radius: 10px;
       background-color: $light-grey;
     }
   }
@@ -172,10 +173,13 @@ a.link-to-post{
 .post-title{
   margin: 0 auto;
   padding: 20px 10%;
-  height: 30%;
+  height: 25%;
   background-color: $light-grey;
   time, h1{
-    color: white;
+    color: black;
+  }
+  p{
+    text-align: center;
   }
 }
 
