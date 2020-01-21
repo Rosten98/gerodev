@@ -9,6 +9,14 @@ html, body{
   width: 100%;
 }
 
+h1, h2, h3, h4{
+  color: $font-color;
+}
+
+p, span, a{
+  color: $font-color-medium;
+}
+
 nav{
   display: flex;
   justify-content: space-between;
@@ -77,18 +85,19 @@ h1{
 
 .jumbotron{
   // width: 100%;
-  background-color: $light-grey;
-  padding: 60px;
+  background-color: $jumbotron;
   border-radius: 40px;
   text-align: center;
   font-weight: 300;
+  padding: 50px;
   margin: 0 10%;
   margin-bottom: 40px;
-  b{
+  .jumbotron-title{
     font-size: 1.5rem;
   }
-  p{
+  .jumbotron-content{
     font-size: 1.2rem;
+    padding: 40px 0 0 0;
   }
 }
 
@@ -96,9 +105,9 @@ h1{
   margin: 0px 10%;
   padding: 10px 0;
   h2{
-    width: 100%;
+    border-bottom: 1px solid rgb(211, 211, 211);
     margin-bottom: 5px;
-    border-bottom: 1px dashed lightgrey;
+    padding-bottom: 15px;
   }
   ul{
     list-style: none;
@@ -109,14 +118,9 @@ h1{
     }
     li:hover{
       border-radius: 10px;
-      background-color: $light-grey;
+      background-color: $link-hover;
     }
   }
-}
-
-div.card span{
-  font-weight: normal;
-  font-size: 0.8rem;
 }
 
 .pages-content{
@@ -132,54 +136,68 @@ div.card span{
 .card{
   margin: 0 10%;
   padding: 40px 20px;
-  border-bottom: 1px dashed;
-  border-color: lightgrey;
+  background-color: $light-grey;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  .card-header{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    h3{
+      font-size: 1.5rem;
+    }
+    span{
+      font-weight: normal;
+      font-size: 0.8rem;
+    }
+    .card-categories{
+      margin: auto 0 auto auto;
+      p{
+        background-color: $link-color;
+        border-radius: 5px;
+        display: inline;
+        margin-right: 5px;
+        padding: 8px;
+        text-align: center;
+        font-size: .7em;
+        color: white;
+      }
+      // width: 60px;
+    }
+  }
+  .card-content{
+    text-align: justify;
+    p {
+      margin-top: 20px;
+    }
+  }
 }
 .card:hover{
-  background-color: $light-grey;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
   box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
 }
-.card h3{
-  font-size: 1.5rem;
-}
-.card-header{
-  display: flex;
-  justify-content: space-between;
-  .categories{
-    margin: auto 0;
-    p{
-      background-color: lightblue;
-      border-radius: 5px;
-      display: inline;
-      margin-right: 5px;
-      padding: 8px;
-      text-align: center;
-    }
-    // width: 60px;
-  }
-}
-.card-content{
-  text-align: justify;
-  p {
-    margin-top: 20px;
-  }
-}
+
 a.link-to-post{
   color: $font-color
 }
 
 .post-title{
-  margin: 0 auto;
   padding: 20px 10%;
-  height: 25%;
-  background-color: $light-grey;
-  time, h1{
-    color: black;
+  h1{
+    margin: 0;
+    text-align: left;
+    font-size: 4em;
   }
   p{
-    text-align: center;
+    margin: 30px 0;
+  }
+  time{
+     font-weight: 300;
+     border-bottom: 1px solid;
   }
 }
 
@@ -195,8 +213,15 @@ a.link-to-post{
     margin: 50px 0 20px 0;
   }
   h2{
+    padding-bottom: 20px;
     border-bottom: 1px solid rgb(211, 211, 211);
   }
+}
+
+.tag-category{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $light-grey;
 }
 
 footer{
@@ -260,19 +285,27 @@ footer{
       display: none;
     }
   }
+
   .jumbotron{
     margin: 0;
     margin-bottom: 40px;
     border-radius: 0;
   }
-  .division-container{
-    ul a li{
-      text-decoration: underline;
+
+  .card{
+    .card-header{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+      .card-title{
+        grid-row-start: 2;
+      }
+      .card-categories{
+        grid-row-start: 1;
+      }
     }
   }
-  .card{
 
-  }
   footer{
     a{
       text-decoration: underline;

@@ -8,8 +8,9 @@ layout: default
 <h1>Bienvenido</h1>
 
 <div class="jumbotron">
-  <p>
-    <b>¡Hola mundo!</b> Mi nombre es Gerardo y soy desarrollador de software.
+  <b class="jumbotron-title">¡Hola mundo!</b>
+  <p class="jumbotron-content">
+     Mi nombre es Gerardo y soy desarrollador de software.
       Este blog tiene por objetivo documentar todo lo que aprendo en mi desarrollo como programador, y que además sirva de referencia para otros programadores en su proceso de aprendizaje.
   </p>
 </div>
@@ -19,7 +20,7 @@ layout: default
   <ul>
     {% for post in site.posts limit:3%}
         <a href="{{ post.url }}">
-          <li>{{ post.title }}</li>
+          <li><p>{{ post.title }}</p></li>
         </a>
     {% else %}
       <p>No hay post publicados</p>
@@ -33,8 +34,8 @@ layout: default
 <div class="division-container">
   <h2>Recursos extra</h2>
   <ul>
-    <a href="https://www.taniarascia.com/" target="_blank"><li>Tania Rascia blogspot</li></a>
-    <a href="https://htmlreference.io/" target="_blank"><li>HTML Reference</li></a>
-    <a href="https://cssreference.io/" ><li>CSS Reference</li></a>
+    <a href="https://www.taniarascia.com/" target="_blank"><li><p>Tania Rascia blogspot</p></li></a>
+    <a href="https://htmlreference.io/" target="_blank"><li><p>HTML Reference</p></li></a>
+    <a href="https://cssreference.io/" ><li><p>CSS Reference</p></li></a>
   </ul>
 </div>
