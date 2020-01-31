@@ -1,21 +1,18 @@
-$font-style: 'Lato', 'Open Sans', sans-serif;
+$font-style: 'Montserrat', 'Open Sans', sans-serif;
 $content-width: 800px;
 
-$main-dark: #1B2A3B;
+$main-dark: hsl(212, 37%, 15%);
+$main-light: hsl(212, 37%, 98%);
 
-$font-color: #1f1f1f;
-$font-color-medium: #3a3a3a;
+$secondary: hsl(90, 39%, 75%);
 
+$font-color: hsl(0, 0%, 15%);
+$font-color-medium: hsl(0, 0%, 25%);
 
-$link-color: #688EB9;
-$link-hover: rgba(235, 237, 239, 0.3);
+$link-color: hsl(212, 37%, 65%);
 
-$jumbotron:  #f2f4f4;
-
-$light-grey: #F7F7F7;
-
-$heading-font: 'Muli', sans-serif;
-$heading-font-color: #425469;
+// $jumbotron: hsl(212, 37%, 98%);
+$jumbotron: white;
 
 
 *,

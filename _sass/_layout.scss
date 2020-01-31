@@ -17,11 +17,39 @@ p, span, a{
   color: $font-color-medium;
 }
 
+a:hover, a:active, a:focus{
+    outline: none;
+}
+
+i.fab{
+  color: #FFF;
+  font-size: 1.4rem;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: $link-color;
+}
+
+hr{
+  background-color: $secondary;
+  height: 2px;
+  border: none;
+  width: 35%;
+  margin: 20px auto;
+}
+
 nav{
   display: flex;
   justify-content: space-between;
   align-content: space-between;
   padding: 20px 10%;
+
+  // -webkit-box-shadow: 0px 5px 55px -42px rgba(0,0,0,0.3);
+  // -moz-box-shadow: 0px 5px 55px -42px rgba(0,0,0,0.3);
+  // box-shadow: 0px 5px 55px -42px rgba(0,0,0,0.4);
 
   .mobile-nav{
     display: none;
@@ -43,13 +71,11 @@ nav{
     align-content: flex-end;
     a.logo-name{
       color: $main-dark;
-        margin: auto 10px;
+      margin: auto 10px;
     }
   }
-
   ul{
     list-style: none;
-    // margin: auto 0;
     li{
       display: inline-block;
       a{
@@ -59,66 +85,48 @@ nav{
   }
 }
 
-a:hover, a:active, a:focus{
-    outline: none;
-}
-
-i.fab{
-  color: #FFF;
-  font-size: 1.4rem;
-}
-
-header{
-  width: 100%;
-}
-
-a{
-  text-decoration: none;
-}
-a:hover{
-  color: $link-color;
-}
-h1{
-  margin: 0 0 20px 0;
-  text-align: center;
-}
-
 .jumbotron{
-  // width: 100%;
   background-color: $jumbotron;
-  border-radius: 20px;
   text-align: center;
-  font-weight: 300;
-  padding: 50px;
+  font-weight: 400;
   margin: 0 10%;
-  margin-bottom: 40px;
-  .jumbotron-title{
-    font-size: 1.5rem;
+  padding-bottom: 40px;
+  b{
+    font-size: 2rem;
   }
-  .jumbotron-content{
+  p{
     font-size: 1.2rem;
-    padding: 40px 0 0 0;
+    margin: 40px 0;
   }
 }
 
-.division-container{
+.container{
   margin: 0px 10%;
-  padding: 10px 0;
-  h2{
-    border-bottom: 1px solid rgb(211, 211, 211);
-    margin-bottom: 5px;
-    padding-bottom: 15px;
-  }
-  ul{
-    list-style: none;
-    font-size: 1.1rem;
-    li{
-      width: 100%;
-      padding: 18px 10px;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+
+  .container-item{
+    padding: 10px 0;
+    h2{
+      // border-bottom: 2px solid $secondary;
+      margin-bottom: 5px;
+      padding-bottom: 15px;
     }
-    li:hover{
-      border-radius: 10px;
-      background-color: $link-hover;
+    hr{
+      margin: 0;
+      width: 80%;
+    }
+    ul{
+      list-style: none;
+      font-size: 1.1rem;
+      li{
+        // width: 100%;
+        padding: 18px 10px;
+      }
+      li:hover{
+        border-radius: 10px;
+        background-color: $main-light;
+      }
     }
   }
 }
@@ -131,97 +139,6 @@ h1{
   p{
     line-height: 30px;
   }
-}
-
-.card{
-  margin: 0 10%;
-  padding: 40px 20px;
-  background-color: $light-grey;
-  border-radius: 10px;
-  border: 1px solid lightgrey;
-  .card-header{
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    // display: flex;
-    // justify-content: space-between;
-    h3{
-      font-size: 1.5rem;
-    }
-    span{
-      font-weight: normal;
-      font-size: 0.8rem;
-    }
-    .card-categories{
-      margin: auto 0 auto auto;
-      p{
-        background-color: $link-color;
-        border-radius: 5px;
-        display: inline;
-        margin-right: 5px;
-        padding: 8px;
-        text-align: center;
-        font-size: .7em;
-        color: white;
-      }
-      // width: 60px;
-    }
-  }
-  .card-content{
-    text-align: justify;
-    p {
-      margin-top: 20px;
-    }
-  }
-}
-.card:hover{
-  background-color: white;
-  -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.1);
-}
-
-a.link-to-post{
-  color: $font-color
-}
-
-.post-title{
-  padding: 20px 10%;
-  h1{
-    margin: 0;
-    text-align: left;
-    font-size: 4em;
-  }
-  p{
-    margin: 30px 0;
-  }
-  time{
-     font-weight: 300;
-     border-bottom: 1px solid;
-  }
-}
-
-.post-content{
-  padding: 0 10%;
-  p{
-    margin: 20px 0;
-    font-size: 1.2rem;
-    line-height: 30px;
-    text-align: justify;
-  }
-  h2,h3{
-    margin: 50px 0 20px 0;
-  }
-  h2{
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(211, 211, 211);
-  }
-}
-
-.tag-category{
-    padding: 10px;
-    border-radius: 10px;
-    background-color: $light-grey;
 }
 
 footer{
@@ -245,70 +162,6 @@ footer{
     p{
       color: white;
       display: inline-block
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  nav{
-    /* For mobile phones: */
-    padding: 20px 10px;
-    i.fas{
-      display: inline;
-    }
-    .logo{
-      margin: auto 0;
-    }
-    .mobile-nav{
-      // display: none;
-      position: absolute;
-      // padding: 0 10%;
-      top: 112px;
-      right: 0;
-      width: 100%;
-      height: 128px;
-      a{
-        background-color: #FFF;
-        display: inline-block;
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        p{
-          // height: 100%;
-          color: $main-dark;
-          padding: 24px 0 0 0;
-          font-size: 1.1rem;
-        }
-      }
-    }
-    .desktop-nav{
-      display: none;
-    }
-  }
-
-  .jumbotron{
-    margin: 0;
-    margin-bottom: 40px;
-    border-radius: 0;
-  }
-
-  .card{
-    .card-header{
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: 1fr 1fr;
-      .card-title{
-        grid-row-start: 2;
-      }
-      .card-categories{
-        grid-row-start: 1;
-      }
-    }
-  }
-
-  footer{
-    a{
-      text-decoration: underline;
     }
   }
 }

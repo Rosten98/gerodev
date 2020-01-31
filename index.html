@@ -4,38 +4,49 @@
 
 layout: default
 ---
-
-<h1>Bienvenido</h1>
-
 <div class="jumbotron">
-  <b class="jumbotron-title">¡Hola mundo!</b>
-  <p class="jumbotron-content">
+  <b>¡Hola mundo!</b>
+  <hr>
+  <p>
      Mi nombre es Gerardo y soy desarrollador de software.
-      Este blog tiene por objetivo documentar todo lo que aprendo en mi desarrollo como programador, y que además sirva de referencia para otros programadores en su proceso de aprendizaje.
+     Este blog tiene por objetivo documentar todo lo que aprendo en mi desarrollo como programador, y que además sirva de referencia para otros programadores en su proceso de aprendizaje.
   </p>
 </div>
 
-<div class="division-container">
-  <h2>Últimas publicaciones</h2>
-  <ul>
-    {% for post in site.posts limit:3%}
-        <a href="{{ post.url }}">
-          <li><p>{{ post.title }}</p></li>
-        </a>
-    {% else %}
+<div class="container">
+  <div class="container-item">
+    <h2>Artículos</h2>
+    <hr>
+    <ul>
+      {% for post in site.posts limit:3%}
+      <a href="{{ post.url }}">
+        <li><p>{{ post.title }}</p></li>
+      </a>
+      {% else %}
       <p>No hay post publicados</p>
-    {% endfor %}
-  </ul>
-  {% if site.posts.size > 3 %}
+      {% endfor %}
+    </ul>
+    {% if site.posts.size > 3 %}
     <button><a href="">Ver más</a></button>
-  {% endif %}
-</div>
+    {% endif %}
+  </div>
 
-<div class="division-container">
-  <h2>Otros blogs de ayuda</h2>
-  <ul>
-    <a href="https://www.taniarascia.com/" target="_blank"><li><p>Tania Rascia blogspot</p></li></a>
-    <a href="https://realpython.com/" target="_blank"><li><p>Real Python</p></li></a>
-    <a href="https://www.w3schools.com/" ><li><p>W3 Schools</p></li></a>
-  </ul>
+  <div class="container-item">
+    <h2>Guías rápidas</h2>
+    <hr>
+    <ul>
+      <a href="#">
+        <li>Blog de prueba</li>
+      </a>
+    </ul>
+  </div>
+  <div class="container-item">
+    <h2>Recomendados</h2>
+    <hr>
+    <ul>
+      <a href="https://www.taniarascia.com/" target="_blank"><li><p>Tania Rascia blogspot</p></li></a>
+      <a href="https://realpython.com/" target="_blank"><li><p>Real Python</p></li></a>
+      <a href="https://www.w3schools.com/" ><li><p>W3 Schools</p></li></a>
+    </ul>
+  </div>
 </div>
