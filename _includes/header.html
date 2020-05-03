@@ -4,25 +4,14 @@
 		<a href="/" class="logo-name"><b>GeroDev</b></a>
 	</div>
 
-	<i class="fas fa-bars"></i>
-	<i class="fas fa-times"></i>
-	<div class="desktop-nav">
-		<ul>
-			<li><a href="{{ '/' | prepend: site.baseurl }}">Inicio</a></li>
-			{% for page in site.pages %}
-				{% if page.title %}
-					<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-				{% endif %}
-			{% endfor %}
-		</ul>
-	</div>
-	<div class="mobile-nav">
-		<a href="{{ '/' | prepend: site.baseurl }}"><p>Inicio</p></a>
+	<ul>
+		<li><a href="{{ '/' | prepend: site.baseurl }}" class="currentLink">Inicio</a></li>
 		{% for page in site.pages %}
 			{% if page.title %}
-				<a href="{{ page.url | prepend: site.baseurl }}"><p>{{ page.title }}</p></a>
+				<li><a href="{{ page.url | prepend: site.baseurl }}" class="">{{ page.title }}</a></li>
 			{% endif %}
 		{% endfor %}
-	</div>
+	</ul>
+
 
 </nav>
