@@ -2,7 +2,7 @@
 layout: page
 title: Sobre mí
 permalink: /about/
-published: false
+published: true
 ---
 
 ### ¿Quién soy?

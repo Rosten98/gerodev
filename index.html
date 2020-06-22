@@ -1,58 +1,22 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+title: Blog
 layout: default
 ---
-<div class="hero">
-  <div class="hero-left">
-    <b>¡Hola mundo!</b>
 
-    <p>
-       Mi nombre es Gerardo y soy desarrollador de software.
-       Este blog tiene por objetivo documentar todo lo que aprendo en mi desarrollo como programador, y que además sirva de referencia para otros programadores en su proceso de aprendizaje.
-    </p>
-
-    <a href="{{ '/blog' | prepend: site.baseurl }}"><button type="button" name="button">Ir a blog</button></a>
-  </div>
-  <span class="hero-right"></span>
+<div class="searchbar">
+  <span> Buscar tutorial: </span>
+  <input type="text" placeholder="Busca por etiqueta, tecnología, ...">
+  <i class="fas fa-search"></i>
 </div>
 
-<div class="container">
-  <div class="container-item">
-    <h2>Artículos</h2>
-
-    <ul>
-      {% for post in site.posts limit:3%}
-      <a href="{{ post.url }}">
-        <li><p>{{ post.title }}</p></li>
-      </a>
-      {% else %}
-      <p>No hay post publicados</p>
-      {% endfor %}
-    </ul>
-    {% if site.posts.size > 3 %}
-    <button><a href="">Ver más</a></button>
-    {% endif %}
+{% for post in site.posts %}
+<div class="post">
+  <div class="post-content">
+    <a href="{{ post.url }}" class="post-title">
+      <p>{{ post.title }}</p>
+    </a>
+    <p class="post-date"> {{ post.date | date: "%-d %B, %Y" }}</p>
   </div>
-
-  <div class="container-item">
-    <h2>Guías rápidas</h2>
-
-    <ul>
-      <a href="#">
-        <li>Blog de prueba</li>
-      </a>
-    </ul>
-  </div>
-
-  <div class="container-item">
-    <h2>Recomendados</h2>
-
-    <ul>
-      <a href="https://www.taniarascia.com/" target="_blank"><li><p>Tania Rascia blogspot</p></li></a>
-      <a href="https://realpython.com/" target="_blank"><li><p>Real Python</p></li></a>
-      <a href="https://www.w3schools.com/" ><li><p>W3 Schools</p></li></a>
-    </ul>
-  </div>
+  <span class="post-tag">{{ post.tag }}</span>
 </div>
+{% endfor %}

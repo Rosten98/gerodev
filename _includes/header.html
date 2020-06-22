@@ -1,17 +1,31 @@
-<nav class="nav">
-	<div class="logo">
-		<a href="/"><img src="{{ site.base }}/assets/images/gd1.png" alt="Imágen del sitio" width="50px" height="50px"></a>
-		<a href="/" class="logo-name"><b>GeroDev</b></a>
-	</div>
+<a href="/" class="logo"><span class="secondary-color">
+	&lt/</span>GeroDev<span class="secondary-color">&gt</span>
+</a>
 
+<nav class="nav">
 	<ul>
-		<li><a href="{{ '/' | prepend: site.baseurl }}" class="currentLink">Inicio</a></li>
 		{% for page in site.pages %}
 			{% if page.title %}
-				<li><a href="{{ page.url | prepend: site.baseurl }}" class="">{{ page.title }}</a></li>
+				<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
 			{% endif %}
 		{% endfor %}
+		<div class="social">
+			<li><a href="https://twitter.com/rosten98" target="_blank"><i class="fab fa-twitter"></i>Twitter</a></li>
+			<li><a href="https://github.com/rosten98" target="_blank"><i class="fab fa-github"></i>Github</a></li>
+		</div>
 	</ul>
+	<div class="social">
 
-
+	</div>
 </nav>
+
+{% if page.url == "/" %}
+<aside>
+	<p>Etiquetas:</p>
+	<div class="tags">
+		{% for tag in site.data.tags %}
+		<span> {{ tag.name }} </span>
+		{% endfor %}
+	</div>
+</aside>
+{%endif%}
