@@ -1,6 +1,8 @@
 ---
+layout: page
 title: Blog
-layout: default
+permalink: /blog/
+published: true
 ---
 
 <div class="searchbar">
