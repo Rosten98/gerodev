@@ -33,11 +33,11 @@ header {
     padding: 1em;
     border-radius: 10px;
 
-    .fab {
+    .fab, .fas {
       font-size: 1.4em;
       margin-right: .3em;
     }
-    .fab:hover {
+    .fab:hover , .fas:hover {
       color: $secondary;
     }
 
@@ -48,6 +48,13 @@ header {
     ul {
       li{
         margin: .8em 0;
+        a{
+          transition: all .2s;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #703EFF;
+        }
       }
     }
   }
@@ -81,10 +88,6 @@ header {
     font-size: 1.5em;
     font-weight: 700;
   }
-}
-
-hr{
-    color: #fefefe;
 }
 
 h2 {
@@ -149,6 +152,7 @@ main {
         padding: 1em 0;
         border-radius: 10px;
         margin-top: 2em;
+        transition: all .2s;
       }
 
       button:hover {
@@ -192,6 +196,7 @@ main {
   margin-top: 1em;
   border-radius: 10px;
   box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+  transition: all .1s;
 
   .post-title {
     font-size: 1.4em;
@@ -215,17 +220,36 @@ main {
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
-.portfolio {
-  // display: grid;
-  // // place-content: center;
+.portfolio-title {
   margin-top: 2em;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  // place-content: center;
   img{
+    border-radius: .5em;
     box-shadow: 0 0 10px 1px rgba(0,0,0, 0.1);
     width: 300px;
     margin: 1em;
   }
 }
 
+.portfolio-item {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a{
+    color: #703EFF;
+    transition: .1s;
+    cursor: pointer;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+}
 @media (max-width: 1000px) {
   header{
     margin-left: 1.3em;
