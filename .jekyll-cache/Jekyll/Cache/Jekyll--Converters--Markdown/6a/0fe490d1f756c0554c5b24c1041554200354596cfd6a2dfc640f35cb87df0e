@@ -1,0 +1,7 @@
+I"­<div class="searchbar">
+  <span> Buscar tutorial: </span>
+  <input type="text" placeholder="Busca por etiqueta, tecnologÃ­a, ..." />
+  <i class="fas fa-search"></i>
+</div>
+
+:ET

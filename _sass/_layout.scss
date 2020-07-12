@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+
+a {
+  color: $main-text;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  margin: 1em;
+  margin-left: 7em;
+  nav {
+    margin-top: 1em;
+    background: #F1ECFF;
+    padding: 1em;
+    border-radius: 10px;
+
+    .fab, .fas {
+      font-size: 1.4em;
+      margin-right: .3em;
+    }
+    .fab:hover , .fas:hover {
+      color: $secondary;
+    }
+
+    .social {
+      margin-top: 1.2em;
+    }
+
+    ul {
+      li{
+        margin: .8em 0;
+        a{
+          transition: all .2s;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #703EFF;
+        }
+      }
+    }
+  }
+
+  aside {
+    margin-top: 1em;
+    background: #F1ECFF;
+    padding: 1em;
+    border-radius: 10px;
+
+    .tags{
+      margin-top: .6em;
+      display: flex;
+      flex-wrap: wrap;
+      span {
+        margin: .4em 0;
+        font-size: .8em;
+        border-radius: 10px;
+        background: #D1D1D1;
+        padding: .5em 1em;
+        margin-right: .5em;
+      }
+    }
+  }
+
+  .secondary-color {
+    color: $secondary;
+  }
+
+  .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+h2:before {
+  content: '';
+  position: absolute;
+  width: 5em;
+  height: 7px;
+  top: .8em;
+  background-color: #703EFF;
+}
+
+main {
+  margin: 1em;
+  margin-right: 7em;
+  height: 98%;
+}
+
+.main-header{
+  margin-top: 2em;
+  width: 80%;
+    h3  {
+      font-size: 2.2em;
+    }
+
+    h3:before {
+      content: '';
+      position: absolute;
+      width: 5em;
+      height: 7px;
+      top: .8em;
+      background-color: #703EFF;
+    }
+
+    p{
+      line-height: 2em;
+      margin-bottom: 1em;
+    }
+
+    p.summary {
+      background: #f3f3f3;
+      padding: 1em;
+      border-radius: 10px;
+    }
+
+    p.subheader {
+      font-size: 1.6em;
+    }
+
+    a {
+      button {
+        cursor: pointer;
+        border: 2px solid #703EFF;
+        background-color: #703EFF;
+        color: #fff;
+        font-weight: bold;
+        width: 40%;
+        padding: 1em 0;
+        border-radius: 10px;
+        margin-top: 2em;
+        transition: all .2s;
+      }
+
+      button:hover {
+        border: 2px solid #703EFF;
+        background-color: #fff;
+        color: #703EFF;
+      }
+    }
+
+}
+
+.searchbar {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+    span {
+      margin: auto 0;
+      color: #6C6C6C;
+      font-size: .9em;
+    }
+    input {
+      background-color: #F2F2F2;
+      border: none;
+      height: 2.2em;
+      padding: 1em;
+      border-radius: 10px;
+      color: $main-text;
+    }
+    .fa-search {
+      position: absolute;
+      top: 1.5em;
+      right: 9em;
+      color: #6c6c6c;
+    }
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5em;
+  margin-top: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+  transition: all .1s;
+
+  .post-title {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+  .post-date {
+    margin-top: .8em;
+    font-size: .9em;
+    color: #b1b1b1;
+  }
+  .post-tag{
+    font-size: .8em;
+    border-radius: 10px;
+    background: #D1D1D1;
+    padding: .5em 1em;
+  }
+}
+
+.post:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-title {
+  margin-top: 2em;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  // place-content: center;
+  img{
+    border-radius: .5em;
+    box-shadow: 0 0 10px 1px rgba(0,0,0, 0.1);
+    width: 300px;
+    margin: 1em;
+  }
+}
+
+.portfolio-item {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a{
+    color: #703EFF;
+    transition: .1s;
+    cursor: pointer;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+}
+@media (max-width: 1000px) {
+  header{
+    margin-left: 1.3em;
+  }
+
+  main {
+    margin-right: 1.3em;
+  }
+  .searchbar{
+    .fa-search {
+      position: absolute;
+      top: 1.5em;
+      right: 2.2em;
+    }
+  }
+}
